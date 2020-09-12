@@ -10,13 +10,13 @@ var myImage = document.querySelector('img');
 myImage.onclick = function(){
     var mySrc = myImage.getAttribute('src');
     if(mySrc === 'images/IMG_5604.JPG'){
-        myImage.setAttribute('src','images/1.JPG');
-    } else if(mySrc === 'images/1.JPG'){
-        myImage.setAttribute('src','images/2.JPG');
-    } else if(mySrc === 'images/2.JPG'){
-        myImage.setAttribute('src','images/3.JPG');
-    } else if(mySrc === 'images/3.JPG'){
-        myImage.setAttribute('src','images/4.JPG');
+        myImage.setAttribute('src','IMG_5605.JPG');
+    } else if(mySrc === 'IMG_5605.JPG'){
+        myImage.setAttribute('src','IMG_5606.JPG');
+    } else if(mySrc === 'IMG_5606.JPG'){
+        myImage.setAttribute('src','IMG_5607.JPG');
+    } else if(mySrc === 'IMG_5607.JPG'){
+        myImage.setAttribute('src','IMG_5608.JPG');
     } else {
         myImage.setAttribute('src','images/IMG_5604.JPG');
     }
