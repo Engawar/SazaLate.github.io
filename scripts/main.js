@@ -1,29 +1,31 @@
+/////////////////R_otonashi Portfolioをクリックすると404 not foundと出るプログラム//////////////
 var myHTML = document.querySelector('h6');
 myHTML.onclick = function(){
     alert('404 not found.')
 };
 
 
-// 以下、画像クリックすると画像が差し替わるプログラム
-var myImage = document.querySelector('img');
 
-myImage.onclick = function(){
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/IMG_5604.JPG'){
-        myImage.setAttribute('src','images/IMG_5605.JPG');
-    } else if(mySrc === 'images/IMG_5605.JPG'){
-        myImage.setAttribute('src','images/IMG_5606.JPG');
-    } else if(mySrc === 'images/IMG_5606.JPG'){
-        myImage.setAttribute('src','images/IMG_5607.JPG');
-    } else if(mySrc === 'images/IMG_5607.JPG'){
-        myImage.setAttribute('src','images/IMG_5608.JPG');
+/////////////////画像を3000ミリ秒で切り替えるプログラム/////////////////
+var ChImage = new Array("images/IMG_5604.JPG","images/IMG_5605.JPG","images/IMG_5606.JPG","images/IMG_5607.JPG","images/IMG_5608.JPG");
+var num = -1;
+
+slideshow_timer();
+
+function slideshow_timer(){
+    if(num == 4){
+        num = 0;
     } else {
-        myImage.setAttribute('src','images/IMG_5604.JPG');
+        num ++;
     }
+    document.getElementById("my_pic").src=ChImage[num];
+    setTimeout("slideshow_timer()",3000);
 }
 
 
-//　ここからボタンを作って自己紹介を改ざんするプログラム
+
+
+/////////////////ここからボタンを作って自己紹介を改ざんするプログラム/////////////////
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h5');
 
